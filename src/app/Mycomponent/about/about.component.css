@@ -1,0 +1,25 @@
+.vstack a {
+    text-decoration: none;
+    color: black;
+}
+
+.vstack a:hover {
+    color: chocolate
+}
+@keyframes motion{
+    from{
+        left:57.4%;
+    }
+    to{
+        left:0%;
+        
+    }
+}
+.trans{
+    position: relative;
+    animation: motion 4s ease-out;
+}
+.revtrans{
+    animation: motion 4s ease-in;
+    animation-direction: reverse;
+}

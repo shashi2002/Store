@@ -1,0 +1,109 @@
+.c-flex{
+    display: flex;
+}
+.card-item .item .productImg{
+    width: 300px;
+    height: 180px ;
+    border-radius: 15px;
+    position: relative;
+    top:-30px;
+    transition: 0.3s ease;
+}
+.card-item .item .productImg:hover{
+    top: -45px;
+    box-shadow: 0px 5px 10px #0404048c;
+}
+.card-item .item{
+    margin: 10px ;
+    /* color: #fff; */
+    background-color: rgb(236, 236, 236,0.2);
+    width:350px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    top: 20px;
+}
+.card-item{
+    display: flex;
+    padding-left: 20px;
+}
+.gupter-bold {
+    font-family: "Gupter", serif;
+    font-weight: 700;
+    font-style: normal;
+    overflow: hidden;
+}
+@keyframes move {
+    from{
+        transform: translateX(-25%);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+#move_Text p{
+    animation: move 10s linear infinite;
+}
+#move_Text p img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.box{
+    height: 500px;
+    width: 600px;
+}
+#box1{
+    height: 50%;
+}
+#box2{
+    height: 50%;
+}
+#box1 img{
+    margin: 5px;
+    width: 48.3%;
+    height: 96%;
+    border-radius: 10px;
+    border-radius: 50px 50px 0px 0px;
+}
+#box2 .same{
+    margin: 5px;
+    width: 32.4%;
+    height: 96%;
+    border-radius: 10px;
+    border-radius: 0px 0px 50px 50px;
+}
+#box2 #diff{
+    margin: 5px;
+    width: 30%;
+    height: 96%;
+    border-radius: 10px;
+    border-radius: 50px 50px 50px 50px;
+}
+#stock{
+    margin-right: 15px;
+    width: 516px;
+    height: 280px;
+    position: relative;
+    top: 60px;
+    border-radius: 100px 0px 100px 0px;
+}
+.photo img:hover{
+    box-shadow: 5px 5px 15px aqua;
+    top: -70px;
+}
+.text-container {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 16px;
+}
+/* rgb(236, 236, 236,0.2); */

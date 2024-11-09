@@ -1,0 +1,6 @@
+<div class="container d-flex flex-wrap" *ngIf="sProduct==false">
+    <app-product-item *ngFor="let product of show" [product]="product" (productSelect)="showEvent($event)" ></app-product-item>
+</div>
+<div class="container d-flex flex-wrap" *ngIf="sProduct==true">
+    <app-show-product [product]="vproduct" ></app-show-product>
+</div>

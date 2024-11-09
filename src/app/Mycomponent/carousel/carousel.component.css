@@ -1,0 +1,6 @@
+#carouselExampleCaptions.carousel {
+    height: 465px;
+    /* Set your desired height here */
+    overflow: hidden;
+    /* Optional: Hide overflow if necessary */
+}
