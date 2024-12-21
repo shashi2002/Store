@@ -14,6 +14,7 @@ export class ShowProductComponent {
   constructor(private dataTransfer:ProductDataTransferService){
   }
   sendData($event:Product){
+    console.log($event)
     this.dataTransfer.reciveData($event);
   }
   onInit(){

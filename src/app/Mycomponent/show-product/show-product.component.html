@@ -1,17 +1,123 @@
-<div class="container d-flex" >
-    <div class="container-md"  >
-        <img class="p-5" id="image" src="{{product.img}}" alt="">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<body>
+    <div id="wrap">
+        <div id="product_layout_3">
+            <div class="product_image">
+                <div class="main_image">
+                    <img src="{{product.img}}" />
+                </div>
+            </div>
+            <div class="product_desc">
+                <h1>{{product.name}}</h1>
+                <!-- <span class="price">$75</span> -->
+                <span class="sale_price">${{product.price}}</span>
+                <span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star-half"></i></span>
+                <div class="product_options">
+                    <div class="select">
+                        <select id="size">
+                            <option value="1">Small</option>
+                            <option value="2">Medium</option>
+                            <option value="3">Large</option>
+                            <option value="4">X-Large</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="buying">
+                    <div class="quantity">
+                        <label for="quantity">QTY:</label>
+                        <input type="text">
+                    </div>
+                    <div class="cart">
+                        <button (click)="sendData(product)" class="add">Add to Cart <i class="fa fa-shopping-cart fa-lg"></i></button>
+                    </div>
+                </div>
+                <div class="other_options">
+                    <span class="SKU">SKU:12345</span>
+                    <span class="QTY">QTY:35</span>
+                </div>
+                <div class="description">
+                    <p>Excuse me. I'll call you tonight. Right. Yeah, I think maybe you do. Wait a minute, wait a
+                        minute, Doc, are you telling me that you built a time machine out of a delorean.</p>
+                    <p>Um, well it's a delorean, right? Yeah okay. Wow, ah Red, you look great. Everything looks great.
+                        1:24, I still got time. Oh my god. No, no not again, c'mon, c'mon. Hey. Libyans. Yeah, well uh,
+                        lets keep this brain melting stuff to ourselves, okay? Yeah, yeah what are you wearing, Dave.
+                    </p>
+                    <p>Hey c'mon, I had to change, you think I'm going back in that zoot suit? The old man really came
+                        through it worked. You'll find out in thirty years. Can't be. This is nuts. Aw, c'mon. Hey guys,
+                        you gotta get back in there and finish the dance. Right, and where am I gonna be?</p>
+                </div>
+                <div class="social">
+                    <span class="share">Share This:</span><span class="buttons"><img
+                            src="https://i.imgur.com/M8D8rr8.jpg" /></span>
+                </div>
+            </div>
+            <div class="tabular">
+                <ul class="tabs group">
+                    <li><a href="#/one">More Info</a></li>
+                    <li><a href="#/two">Reviews</a></li>
+                    <li><a class="active" href="#/three">Details</a></li>
+                </ul>
+                <div id="content">
+                    <aside id="one">
+                        <p>Excuse me. I'll call you tonight. Right. Yeah, I think maybe you do. Wait a minute, wait a
+                            minute, Doc, are you telling me that you built a time machine out of a delorean.</p>
+                        <p>Um, well it's a delorean, right? Yeah okay. Wow, ah Red, you look great. Everything looks
+                            great. 1:24, I still got time. Oh my god. No, no not again, c'mon, c'mon. Hey. Libyans.
+                            Yeah, well uh, lets keep this brain melting stuff to ourselves, okay? Yeah, yeah what are
+                            you wearing, Dave.</p>
+                        <p>Excuse me. I'll call you tonight. Right. Yeah, I think maybe you do. Wait a minute, wait a
+                            minute, Doc, are you telling me that you built a time machine out of a delorean.</p>
+                        <p>Um, well it's a delorean, right? Yeah okay. Wow, ah Red, you look great. Everything looks
+                            great. 1:24, I still got time. Oh my god. No, no not again, c'mon, c'mon. Hey. Libyans.
+                            Yeah, well uh, lets keep this brain melting stuff to ourselves, okay? Yeah, yeah what are
+                            you wearing, Dave.</p>
+                        <p>Excuse me. I'll call you tonight. Right. Yeah, I think maybe you do. Wait a minute, wait a
+                            minute, Doc, are you telling me that you built a time machine out of a delorean.</p>
+                        <p>Um, well it's a delorean, right? Yeah okay. Wow, ah Red, you look great. Everything looks
+                            great. 1:24, I still got time. Oh my god. No, no not again, c'mon, c'mon. Hey. Libyans.
+                            Yeah, well uh, lets keep this brain melting stuff to ourselves, okay? Yeah, yeah what are
+                            you wearing, Dave.</p>
+                    </aside>
+                    <aside id="two">
+                        <span class="author">Marty Mcfly</span><span class="stars"><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half"></i></span>
+                        <p>"Excuse me. I'll call you tonight. Right. Yeah, I think maybe you do. Wait a minute, wait a
+                            minute, Doc, are you telling me that you built a time machine out of a delorean.</p>
+                        <p>Um, well it's a delorean, right? Yeah okay. Wow, ah Red, you look great. Everything looks
+                            great. 1:24, I still got time. Oh my god. No, no not again, c'mon, c'mon. Hey. Libyans.
+                            Yeah, well uh, lets keep this brain melting stuff to ourselves, okay? Yeah, yeah what are
+                            you wearing, Dave.</p>
+                        <p>Hey c'mon, I had to change, you think I'm going back in that zoot suit? The old man really
+                            came through it worked. You'll find out in thirty years. Can't be. This is nuts. Aw, c'mon.
+                            Hey guys, you gotta get back in there and finish the dance. Right, and where am I gonna be?"
+                        </p>
+                        <span class="full_review"><a href="#">Read The Full Review</a></span>
+                        <span class="write_review"><a href="#">Write Your Own Review</a></span>
+                    </aside>
+                    <!-- <aside id="three">
+                        <div class="images">
+                            <img src="https://i.imgur.com/U28rUlR.jpg" />
+                            <img src="https://i.imgur.com/NK3026a.jpg" />
+                            <img src="https://i.imgur.com/w1sfKNd.jpg" />
+                            <img src="https://i.imgur.com/xeDUcdP.jpg" />
+                        </div>
+                        <div class="details">
+                            <p>Excuse me. I'll call you tonight. Right. Yeah, I think maybe you do. Wait a minute, wait
+                                a minute, Doc, are you telling me that you built a time machine out of a delorean.</p>
+                            <p>Um, well it's a delorean, right? Yeah okay. Wow, ah Red, you look great. Everything looks
+                                great. 1:24, I still got time. Oh my god. No, no not again, c'mon, c'mon. Hey. Libyans.
+                                Yeah, well uh, lets keep this brain melting stuff to ourselves, okay? Yeah, yeah what
+                                are you wearing, Dave</p>
+                        </div>
+                    </aside> -->
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="container-md">
-        <p class="gupter-regular text my-5">{{product.name}}</p>
-        <p class="desc my-3">{{product.desc}}</p>
-        <button type="button" class="btn btn-warning d-inline-flex m-4 gupter-regular" (click)="sendData(product)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
-            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
-            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-          </svg><strong>ADD TO CART</strong></button>
-        <button type="button" class="btn btn-outline-warning d-inline-flex m-4 gupter-regular"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
-            <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
-          </svg><strong>BUY ITEM</strong></button>
-    </div>
-</div>
-<!-- style="height:400px" -->
+
+
+    <!-- style="height:400px" -->

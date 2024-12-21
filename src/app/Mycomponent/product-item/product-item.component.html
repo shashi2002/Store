@@ -1,4 +1,4 @@
-<div id="product" class="ps-5 pe-2 py-3 ">
+<!-- <div id="product" class="ps-5 pe-2 py-3 ">
     <div class="card" style="width: 18rem;">
         <img id="myImage" src="{{product.img}}" class="card-img-top" alt="...">
         <div class="card-body">
@@ -8,4 +8,28 @@
             </a>
         </div>
     </div>
+</div> -->
+
+
+<div class="product-card my-3">
+    <!-- <div class="badge">Hot</div> -->
+    <div class="product-tumb">
+        <img src="{{product.img}}" alt="">
+    </div>
+    <div class="product-details">
+        <span class="product-catagory">{{product.brand}}</span>
+        <h4 id="product-name"><a href="">{{product.name}}</a></h4>
+        <p id="product-desc">{{product.desc}}</p>
+        <div class="product-bottom-details">
+            <div class="product-price">${{product.price}}</div>
+            <div class="product-links d-flex"> 
+                <!-- VIEW BUTTON -->
+                <button (click)="sendProduct(product)">
+                    <span>VIEW</span>
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- <small>$96.00</small> -->

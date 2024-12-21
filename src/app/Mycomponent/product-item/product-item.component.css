@@ -1,5 +1,240 @@
-#product .card img{
+/* .card img{
     padding:30px;
-    height:270px;
+    height:250px;
     width: auto;
 }
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  } */
+
+
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+}
+a
+{
+    text-decoration: none;
+}
+.product-card {
+    width: 300px;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    /* margin: 50px auto; */
+    background: #fafafa;
+    margin-right: 72px;
+}
+
+.badge {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: rgb(173, 22, 22);
+    color: #fff;
+    padding: 3px 10px;
+}
+#product-desc{
+    height: 72px;
+    /* width: auto; */
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#product-name{
+    margin-bottom: 10px;
+    height: 60px; 
+    /* width: auto; */
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.product-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 50px;
+    background: white;
+}
+
+.product-tumb img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-details {
+    padding: 30px;
+    background: whitesmoke;
+}
+
+.product-catagory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 18px;
+}
+
+.product-details h4 a {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.product-details h4 a:hover {
+    color: #fbb72c;
+}
+
+.product-details p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #999;
+}
+
+.product-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.product-bottom-details div {
+    float: left;
+    width: 45%;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #fbb72c;
+    font-weight: 600;
+}
+
+.product-price small {
+    font-size: 80%;
+    font-weight: 400;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.product-links {
+    text-align: right;
+}
+
+.product-links a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.product-links a:hover {
+    color: #fbb72c;
+}
+
+/* VIEW BUTTON */
+button {
+    position: relative;
+    margin: 0;
+    padding: 0.8em 1em;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    background-color: #333;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: inherit;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+  
+  button:hover {
+    animation: sh0 0.5s ease-in-out both;
+  }
+  
+  @keyframes sh0 {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  
+    25% {
+      transform: rotate(7deg) translate3d(0, 0, 0);
+    }
+  
+    50% {
+      transform: rotate(-7deg) translate3d(0, 0, 0);
+    }
+  
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+  
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+  
+  button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+  }
+  
+  button::before,
+  button::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+    z-index: -1;
+    transform: translate(100%, -25%) translate3d(0, 0, 0);
+  }
+  
+  button:hover::before,
+  button:hover::after {
+    opacity: 0.15;
+    transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+  
+  button:hover::before {
+    transform: translate3d(50%, 0, 0) scale(0.9);
+  }
+  
+  button:hover::after {
+    transform: translate(50%, 0) scale(1.1);
+  }

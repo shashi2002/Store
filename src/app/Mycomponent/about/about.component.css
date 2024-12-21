@@ -11,15 +11,10 @@
         left:57.4%;
     }
     to{
-        left:0%;
-        
+        left:0%; 
     }
 }
 .trans{
     position: relative;
-    animation: motion 4s ease-out;
-}
-.revtrans{
-    animation: motion 4s ease-in;
-    animation-direction: reverse;
+    animation: motion 2s ease-out;
 }

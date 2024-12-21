@@ -11,7 +11,7 @@ import { ProductDataTransferService } from '../../product-data-transfer.service'
 export class ProductComponent {
   // clothings: Product[] | any;
   // shoes:Product[] | any;
-  sProduct: boolean = false;
+  sProduct: boolean=false;
   vproduct: Product[] | any;
   show:Product[] | any;
   type:string|any;
